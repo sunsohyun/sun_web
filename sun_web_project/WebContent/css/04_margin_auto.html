@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Margin Auto</title>
+	<style>
+		* {
+			margin:0px; padding:0px;
+		}
+		header {
+			background:yellow;
+			height:300px;
+			/* margin_top:100px; */
+		}
+		.content {
+			background:pink;
+			width:100%; height:500px;
+			
+		}
+		section {
+			background:powderblue;
+			height:500px;
+		}
+		footer {
+			background:gray;
+			height:150px;
+		}
+		header, section, footer { /* Selector 그룹핑 , 사용 */
+			width:800px;
+			margin:auto;
+		}
+		/* h1 {
+			background:tomato;
+			width:50%; height:200px; /* px:고정 ,  % : 브라우저에 맞게 상대적으로 변경됨. */
+			margin:30px;
+			/* margin:auto; *//* 브라우저 사이즈 상관없이 가운데 정렬됨(디폴트는 왼쪽임). 아무 사이트나 가서 사이즈 줄여봐도 가운데 정렬된거 확인 가능 이게 다 margin:auto 준거임*/
+		} */
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Margin Auto - Layout</h1> <!-- %로 줄때는 부모가 누구인지가 중요!! 부모인 header의 사이즈가 800px니까 h1은 800의 50%인 400이됨 -->
+	</header>
+	<div class="content">
+		<section>
+			<h1>content</h1>
+		</section>
+	</div>
+	<footer>
+		<h1>footer</h1>
+	</footer>
+</body>
+</html>

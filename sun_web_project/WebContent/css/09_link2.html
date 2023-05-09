@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Links</title>
+	<style>
+		* {font-family:"나눔고딕"; font-weight:bold;}
+		div {
+			border: 1px solid tomato;
+			display:inline-block;
+			margin:10px;
+			padding:10px 30px;/* 각 문자를 기준으로 패딩입혀지니까 크기 다 다름 */
+			width:100px;/* 크기 같게 만들려고 */
+			text-align:center;/* 문자 가운데 정렬 */
+		}
+		/* a 태그 아니여도 변화주기 가능 단, 링크 타고 이동 못함. -> 자바스크립트에서 가능 */
+		div:hover {
+			background:yellow;
+			cursor:pointer;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<h1>Links</h1>
+	<hr>
+	<div onclick="test()">네이버</div><!-- a태그 아니여도 이동하게하기 자바스크립트 사용 단, target은 불가능-->
+	<div>구글</div>
+	<div>다음</div>
+	
+	<script> /* 매개변수랑 같음 */
+		function test(){
+			location.href = 
+				"http://www.naver.com";
+		}
+	</script>
+</body>
+</html>

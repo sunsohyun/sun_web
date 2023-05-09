@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - horizontal</title>
+	<style>
+		ul {
+			list-style-type:none;
+			padding:0px;
+			margin:0px;
+			width:600px;
+			/* height:40px; */
+			background:#555;
+			overflow:hidden; /* 영역벗어나는 건 안보이는건데 height 지정 안한상태에서는 다시담겨진 내용들은 살아남는다. */
+		}
+		li{
+			/* display:inline-block; <- float:left 대신 사용가능!*/
+			float:left; /*<- width/height 부모에서 지정 해줘야 제대로 보여짐!! overflow:hidden; 사용해도됨 */ 
+		}
+		ul > li > a{
+			/* border:1px solid red; */
+			display:block;
+			text-decoration:none;
+			color:white;
+			padding: 8px 15px;
+		}
+		ul > li:first-child > a {
+			background:mediumseagreen;
+		}
+		ul > li:last-child {
+			float:right;/* 매번 오른쪽 끝에 위치하도록 */
+		}
+		ul > li > a:hover:not(.active) {
+			background:#000;
+		}	
+		
+	</style>
+</head>
+<body>
+	<h1>Horizontal</h1>
+	<ul> <!-- left menu -->
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+</body>
+</html>

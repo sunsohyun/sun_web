@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		ul {
+			width:200px;
+			height:400px;
+			list-style-type:none;
+			background:#f1f1f1;
+			padding:0px;
+			margin:0px;
+			float:left;/* content 옆으로 붙이기 */
+		}
+		ul > li > a {
+			/* border:1px solid red; */
+			display:block;
+			padding:8px 15px;
+			text-decoration:none;
+			color:#000;
+		}
+		ul > li:first-child > a {
+			background:mediumseagreen;
+			color:white;
+		}
+		ul > li > a:hover {
+			/* background:#555;
+			color:white; */
+		}
+		ul > li > a:hover:not(.active) {/* 클래스 이름이 active인 태그는 hover 스타일을 적용하지 않겠다. */
+			background:#555;
+			color:white;
+		}		
+		div.content{
+			background:tomato;
+			height:400px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Vertical</h1>
+	
+	<ul> <!-- left menu -->
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+	<div class="content"> <!-- content -->
+		<p>Vertical menu - Home</p>
+	</div>
+	
+	
+</body>
+</html>

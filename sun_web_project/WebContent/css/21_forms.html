@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Forms</title>
+	<style>
+	 	ul {
+	 		border:1px solid tomato;
+	 		list-style-type:none;
+	 		padding:0px; margin:0px;
+	 		width:500px;/* 영역 제한위해 px로 고정 */
+	 	}
+	 	label {
+	 	 	border:1px solid tomato;
+	 	 	display:inline-block;
+	 	 	width:100px;
+	 	 	padding:3px 0px;
+	 	 	font-size:12px;
+	 	 	background:tomato;
+	 	 	color:white;
+	 	 	border-radius:3px;
+	 	 	text-align:center;
+	 	 	margin-right:5px;
+	 	}
+	 	input {
+	 		border:1px solid lightgray;/* 디폴트 border가 생기긴 하지만 디자인적으로 별로라서 직접 설정 */
+	 		width:50%;/* 전체크기의 영향이 아닌 <ul>태그 크기의 영향을 받기 때문에 <ul>의 크기가 px로 고정이라 <input>의 크기도 항상 고정적 */
+	 		padding: 4px 5px;
+	 		border-radius:3px;
+	 		vertical-align:top;
+	 		text-indent:5px;
+	 		outline:none;/* 디폴트로 클릭시 아웃라인 생기는거 없애기 */
+	 	}
+
+	 	input:focus { border:2px solid gray;}
+
+	 	li {
+	 		margin:10px 0px;
+	 		text-align:center;/* 모두 inline 타입이기 때문에 가능 */
+	 	}
+	 	li:first-child, li:last-child {
+			/* border:1px solid blue; */
+			margin-top:20px;	 	
+	 	}
+	 	
+	 	li:last-child {padding-left:20px;}/* 가운데 맞추려고 조금 이동시킴 */
+		
+		button {
+			width:100px;
+			padding:5px;
+			font-size:12px;
+			background:mediumseagreen;
+			color:white;
+			border:2px double lightgray;
+			cursor:pointer;
+		}
+	 	
+	 	
+	</style>
+</head>
+<body>
+	<h1>Forms</h1>
+	<form name="loginForm" action="#" method="get">
+		<ul>
+			<li>
+				<label>ID</label>
+				<input type="text" name="id">
+			</li>
+			<li>
+				<label>Password</label>
+				<input type="password" name="pass">
+			</li>
+			<li>
+				<button type="button">Login</button>
+				<button typd="reset">Cancle</button>
+			</li>
+		</ul>
+		
+	</form>
+</body>
+</html>

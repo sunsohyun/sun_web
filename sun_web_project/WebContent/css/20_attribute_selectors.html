@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Attribute Selectors</title>
+	<style>
+		a[target] {
+			background:pink;
+		}
+		
+		a[target="_self"]{/* 싱글 ''로 감싸도된다. */
+			background:yellow;
+		}
+		img {
+			margin:10px;
+		}
+		img[title~='logo'] {/* title에 logo들어가는거 찾음 */
+			border:5px solid tomato;
+		}
+		img[class^="cgv"]{/* 클래스에 cgv들어간거 */
+			opacity:0.5;
+		}
+		img[class|='cgv']:hover {/* 클래스에 cgv뒤에 -(하이픈)들어간거 */
+			opacity:1;
+		}
+		img[class$='test']{/* test로 끝나는거 선택 */
+			border:3px dotted green;
+		}
+		img[class*='cg']{/* cg 들어가는 모든것 선택 */
+			outline:5px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>Attribute Selectors</h1>
+	<a href="#">Naver</a>
+	<a href="#" target="_blank">Google</a>
+	<a href="#" target="_self">Daum</a>
+	<hr>
+	<img src="h1_cgv.png" title="cgv logo" class="cgv-logo">
+	<img src="h1_cgv.png" title="cgv" class="cgv-img">
+	<img src="h1_cgv.png" title="logo" class="cgvlogo">
+	<img src="h1_cgv.png" title="logo" class="cgvtest">
+</body>
+</html>

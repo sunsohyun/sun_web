@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Display</title>
+	<style>
+		div, span, img {
+			border:1px solid red;
+			width:200px;/* span 제외 크기 수정됨! -> span은 inline 속성이기 때문이다. */
+			height:100px;/* span 제외 크기 수정됨! -> span은 inline 속성이기 때문이다. */
+			display:block;
+		}
+		div, span {
+			display:inline-block;
+		}
+		span {display:none;}
+		div {visibility:hidden;}
+	</style>
+</head>
+<body>
+	<h1>Display :Block, inline, inline-block </h1>
+	<div>Div1</div>
+	<span>Span1</span>
+	<img src="h1_cgv.png">
+</body>
+</html>

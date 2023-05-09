@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS- List</title>
+	<style>
+		* {
+			font-family:"나눔고딕";
+			/* padding:0px; margin:0px; */
+		}
+	
+		ul.u1 {/* ul .u1 으로 한칸 띄어쓰면 ul의 자식중에 클래스가 u1인 애를 찾아감 셀렉팅시 띄어쓰기 매우 중요!!!! */
+			border:1px solid red;
+			list-style-type:circle;
+			padding:20px; /* 공백 지우기 위해 padding 0으로 줘서 없애기 */
+			background:mediumseagreen;
+		}
+		ul.u1 li {/* ul의 클래스가 u1인 애의 모든자식중에 li */
+			border: 1px solid blue;
+			background:pink;
+			margin:5px;
+			padding-left:5px;
+		}
+		ul.u2 {
+			border:1px solid red;
+			list-style-type:none;
+			padding:0px;
+		}
+		ul.u2 li {
+			/* border:1px solid blue; */
+			/* display:inline-block; *//* 블럭속성으로 변경해서 한줄로 만들기 */
+			/* padding:5px; */
+			width:80px;
+			text-align:center;/* a태그를 포함한 li태그에서 써야 가운데 정렬됨!!!! */
+			/* margin-right:10px; */
+			float:left;/* 인라인에는 적용못함 */
+		}
+		ul.u2 a {/* 인라인 속성 */
+			background:tomato;
+			text-decoration:none;
+			display:inline-block;
+			width:80px;
+			padding:10px 5px;
+			margin-right:5px;
+			color:white;
+			font-size:12px;
+			border:1px solid lightgray;
+		}
+		/* li.login {
+			margin-left:20px;}/* 로그인 앞쪽에 띄어주기 위한 방법1 */
+		
+		ul.u2 li:nth-child(1) {/* 로그인 앞쪽에 띄어주기 위한 방법2 이걸 주로 사용! */
+			margin-left:20px;
+			/* background:tomato; */
+		}
+	</style>
+</head>
+<body>
+	<h1>List - UL, OL</h1>
+	<ul class="u1">
+		<li>JAVA</li>
+		<li>Oracle</li>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+	</ul>
+	
+	<h3>Navigation Menu</h3>
+	<ul class="u2">
+		<li><a href="#">로그인</a></li>
+		<li><a href="#">회원가입</a></li>
+		<li><a href="#">마이페이지</a></li>
+		<li><a href="#">공지사항</a></li>
+		<li><a href="#">게시판</a></li>
+		<li><a href="#">관리자</a></li>
+	</ul>
+		
+</body>
+</html>

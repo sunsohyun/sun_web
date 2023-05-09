@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Float/Clear</title>
+	<style>
+		div {
+			background:tomato;
+			color:white;
+			border:1px solid green;
+			width:200px; 
+			padding:20px 0px;
+			text-align:center;
+			/* display:inline-block; *//* 사이사이에 간격있음 */
+			float:left;/* 맨처음 실행되는 div1 기준으로 왼쪽으로 붙어서 옆에 간격 없음 -> 만약 right로 줄경우 div1부터 오른쪽을 가서 순서가 뒤집혀버림. */
+			
+		}
+		.d6 {
+			background:blue;
+			clear:both;/* float 지우기 */
+		}
+		p { background:yellow; width:200px; padding:20px;}
+		
+	</style>
+</head>
+<body>
+	<h1>Float/Clear</h1>
+	<div>div 1</div>
+	<div>div 2</div>
+	<div>div 3</div>
+	<div>div 4</div>
+	<div>div 5</div>
+	<div class="d6">div 6</div>
+	<p>p 태그</p>
+	<div class="d6">div 7</div>
+</body>
+</html>
