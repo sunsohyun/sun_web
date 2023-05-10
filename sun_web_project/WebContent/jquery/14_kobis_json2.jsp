@@ -24,7 +24,6 @@
 		<input type='text' placeholder='날짜입력 예)20220701'>
 		<button type='button' id='btnKobis'>실행</button>
 	</div>
-	
 	<p id="p1">박스오피스 실행결과는 위에 넣어주세요</p>
 </body>
 </html>

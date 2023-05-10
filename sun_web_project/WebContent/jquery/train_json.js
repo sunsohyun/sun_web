@@ -8,7 +8,6 @@ $(document).ready(function(){
 	
 	for(trainName of train.response.body.items.item){
 		
-		
 		code += "<tr>";
 		code += "<td>"+ trainName.vehiclekndnm +"</td>";
 		code += "</tr>";
